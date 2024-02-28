@@ -11,8 +11,7 @@ getAdvice();
 
 // on click generate new advice.
 btn.addEventListener("click", () => {
-  btn.classList.toggle("rotate");
-
+  diceRollAnimation(btn);
   getAdvice();
 });
 
@@ -24,3 +23,12 @@ async function getAdvice() {
   adviceId.innerText = data.slip.id;
   adviceText.innerText = `“${data.slip.advice}”`;
 }
+
+// function for dice roll effect.
+const diceRollAnimation = (btn) => {
+  btn.classList.add("rotate");
+
+  setTimeout(() => {
+    btn.classList.remove("rotate");
+  }, 400);
+};
