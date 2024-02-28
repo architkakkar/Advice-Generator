@@ -62,6 +62,7 @@ h3 {
   position: relative;
   bottom: -45px;
   cursor: pointer;
+  transition: transform 400ms ease;
 }
 
 .dice-container:hover {
@@ -69,8 +70,7 @@ h3 {
 }
 
 .rotate {
-  transition: transform 400ms ease;
-  transform: rotateZ(180deg);
+  transform: rotateZ(270deg);
 }
 
 footer {
